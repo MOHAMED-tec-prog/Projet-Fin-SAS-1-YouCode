@@ -210,17 +210,55 @@ while (true) {
     console.log("0. Quitter");
     console.log("");
 
-    let choice =Number( prompt("Votre choix : "));
+   let choice = Number(prompt("Votre choix : "));
 
-    if (choice === "0") {
+    if (choice === 0) {
         console.log("Au revoir !");
         break;
-    }
+    } else if (choice === 1) {
 
-    
+        console.log("");
+        console.log("=================================");
+        console.log("          LES TRAJETS");
+        console.log("=================================");
+
+        for (let i = 0; i < trips.length; i++) {
+
+            console.log("");
+            console.log("Trajet n°" + trips[i].id);
+            console.log("-----------------------------");
+
+            console.log("Départ : " + trips[i].departure);
+            console.log("Destination : " + trips[i].destination);
+            console.log("Heure de départ : " + trips[i].departureTime);
+            console.log("Heure d'arrivée : " + trips[i].arrivalTime);
+            console.log("Prix : " + trips[i].price + " DH");
+            console.log("Places disponibles : " + trips[i].availableSeats);
+
+        }
+
+        console.log("");
+    }
 }
 
- 
+//step 3
 
-//step 2
+function afficherTrajets() {
+    
+    console.log("=== TRAJETS DISPONIBLES ===");
+    console.log("");
+
+    for(let i = 0 ; i < trips.length ; i++){
+        console.log("#" + trips[i].id + " " +trips[i].departure + " → " + trips[i].destination);
+        console.log("Départ : " + trips[i].departureTime );
+        console.log("Arrivée : " + trips[i].arrivalTime );
+        console.log("prix :" + trips[i].price + "DH");
+        console.log("Places disponibles : " + trips[i].availableSeats);
+    }
+
+
+}
+
+
+// step 4
 
