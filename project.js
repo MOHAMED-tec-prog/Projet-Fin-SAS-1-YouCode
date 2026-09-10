@@ -272,7 +272,7 @@ function acheterTicket() {
         price: trip.price
     };
 
-    trip.availableSeats--;
+    trip.availableSeats--;  
     tickets.push(ticket);
 
     console.log("");
