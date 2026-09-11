@@ -217,6 +217,9 @@ function menuePrincipale(){
         rechercherTicket()
     }else if (choice === 6){
         filtrerTrajets()
+    }else if (choice === 7){
+        trierTrajects()
+        afficherTrajets();
     }
 
     }
@@ -359,7 +362,20 @@ function filtrerTrajets(){
         }
 
 menuePrincipale()
-} 
+}
 
 
+function trierTrajects(){
+for(let i = 0 ; i< trips.length ; i++)
+    for(let j = 0 ; j< trips.length -1-i ; j++)
+        if (trips[j].price > trips[j + 1].price){
+            let temp = trips[j];
+            trips[j]=trips[j+1];
+            trips[j+1] = temp;
+            
+        }  return  console.log("Trajets triés par prix croissant.");
+
+}
+
+ menuePrincipale();
 
